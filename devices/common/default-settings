@@ -51,7 +51,7 @@ test $version -lt 1 && {
 	uci commit uhttpd
 
 	SSID=${DISTRIB_ID}
-	SSID_PASSWD=88888888
+	SSID_PASSWD=999999999
 
 	uci set base_config.@status[0].SSID=${SSID}
 	# uci set base_config.@status[0].SSID_PASSWD=${SSID_PASSWD}
@@ -72,7 +72,7 @@ test $version -lt 1 && {
 	uci commit fstab
  
  	test ! -f /etc/config/placeholder && {
-	sed -i 's/root:.*/root:$1$tTPCBw1t$ldzfp37h5lSpO9VXk4uUE\/:18336:0:99999:7:::/g' /etc/shadow
+	sed -i 's/root:.*/root:$1$McPtUJaL$M47t/nUbjYrWraS5NgvOx0:18552:0:99999:7:::/g' /etc/shadow
 	uci set network.lan.ipaddr="10.0.0.1"
 	uci set network.@globals[0].packet_steering=1
 	uci commit network
